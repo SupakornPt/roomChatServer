@@ -32,7 +32,7 @@ io.on("connection", (socket) => {
             otherUser.join(room)
 
             io.to(room).emit("roomJoined", room)
-            alert(`Room ${room} matched`)
+            console.log(`Room ${room} matched`);
         } else {
             waitingUsers[room] = socket
             console.log(`User ${username} is waiting in room ${room}`)
