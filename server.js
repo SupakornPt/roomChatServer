@@ -13,6 +13,9 @@ const io = new Server(server, {
     cors: { origin: "*" },
 })
 
+app.get("/", (req, res) => {
+    res.send("Socket.io Server is running!");
+});
 
 const waitingUsers = {}
 
